@@ -19,7 +19,7 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
 ];
 
 
-export const PLACEHOLDER_INPUT = "Stel hier je vraag over de cao Contractcatering...";
+export const PLACEHOLDER_INPUT = "Stel hier je vraag over de cao Particuliere Beveiliging...";
 
 export const GREETING = "Hoi, ik ben Una! Waarmee kan ik je helpen?";
 
