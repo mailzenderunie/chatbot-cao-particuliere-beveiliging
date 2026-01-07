@@ -359,10 +359,15 @@ onResponseEnd: () => {
 )}
 
 
-      <div className="p-4 text-sm">
-  Chat wordt nu omgebouwd (veilig via de server). De huidige versie is tijdelijk uitgeschakeld.
-</div>
-
+      <ChatKit
+        key={widgetInstanceKey}
+        control={chatkit.control}
+        className={
+          blockingError || isInitializingSession
+            ? "pointer-events-none opacity-0"
+            : "block h-full w-full"
+        }
+      />
       <ErrorOverlay
         error={blockingError}
         fallbackMessage={
