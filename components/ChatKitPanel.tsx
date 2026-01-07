@@ -49,6 +49,13 @@ export function ChatKitPanel({
   onResponseEnd,
   onThemeRequest,
 }: ChatKitPanelProps) {
+
+  return (
+    <div className="p-4 text-sm">
+      Chat wordt nu omgebouwd (veilig via de server). De huidige versie is tijdelijk uitgeschakeld.
+    </div>
+  );
+
   const processedFacts = useRef(new Set<string>());
   const [errors, setErrors] = useState<ErrorState>(() => createInitialErrors());
   const [isInitializingSession, setIsInitializingSession] = useState(true);
