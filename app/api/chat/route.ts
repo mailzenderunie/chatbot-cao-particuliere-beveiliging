@@ -42,10 +42,16 @@ export async function POST(req: Request) {
       );
     }
 
-    return NextResponse.json({
-      ok: true,
-      text: data.output_text ?? "",
-    });
+const text =
+  data.output_text ??
+  data.output?.[0]?.content?.[0]?.text ??
+  "";
+
+return NextResponse.json({
+  ok: true,
+  text,
+});
+
   } catch (error) {
     return NextResponse.json(
       { ok: false, error: String(error) },
